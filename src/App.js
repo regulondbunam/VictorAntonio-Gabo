@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import Layout from "./layout/layout";
 import Tips from "./apps/tips/tips";
-import YourApp from "./apps/your_app/your_app";
+import YourApp from "./apps/guide-frontend/doc_ui_cya";
 
 export default function App() {
   return (
