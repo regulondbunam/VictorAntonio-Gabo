@@ -1,0 +1,16 @@
+{
+  "gs_cc_buttons": {
+    "buttons": [
+      {
+        "id": 1,
+        "title": "UI-component",
+        "link": "/ui-components"
+      },
+      {
+        "id": 2,
+        "title": "Create React Your App",
+        "link": "/create_your_app"
+      }
+    ]
+  }
+}
