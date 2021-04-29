@@ -1,14 +1,22 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 
 import styles from './gs_cc_buttons.module.css';
 
 function GsCcButton ({ title, id, link }) {
-  console.log(title);
+  let history = useHistory();
+
+  function handleClick() {
+    history.push("ui-component");
+    console.log(link)
+  }
+  
   return (
     <button
       key={`button_main_${id}_${title}`}
       id=""
       className={styles.btn}
+      onClick={handleClick}
     >
     {title}
     </button>

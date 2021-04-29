@@ -1,5 +1,8 @@
 import React from 'react'
 import GsCcButtons from './components/gs_view_main/gs_cc_buttons'
+
+import {MainRouter} from './MainRouter'
+
 import {Cover as GSccHead} from './ui-components/ui_components'
 
 const DocUiCya = () => {
@@ -10,6 +13,10 @@ const DocUiCya = () => {
       </GSccHead>
       
       <GsCcButtons />
+      
+      
+      <MainRouter />
+      
       
     </div>
   )
