@@ -1,10 +1,11 @@
 import React from 'react';
 
 
-export default function gs_ui_component() {
+export default function GsUiComponent() {
   return (
     <div>
       <h3>Hola, funciona</h3>
+      
     </div>
   )
 }

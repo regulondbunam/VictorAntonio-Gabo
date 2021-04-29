@@ -4,6 +4,8 @@ import Layout from "./layout/layout";
 import Tips from "./apps/tips/tips";
 import YourApp from "./apps/guide-frontend/doc_ui_cya";
 
+import GsUiComponent from "./apps/guide-frontend/components/gs_ui_component";
+
 export default function App() {
   return (
     <Layout>
@@ -13,6 +15,9 @@ export default function App() {
         </Route>
         <Route path={"/tips"}>
           <Tips />
+        </Route>
+        <Route path={"/ui-component"}>
+          <GsUiComponent />
         </Route>
         <Route path="*">
           <Tips error="404" />

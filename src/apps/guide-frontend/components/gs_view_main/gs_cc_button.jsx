@@ -5,11 +5,10 @@ import styles from './gs_cc_buttons.module.css';
 
 function GsCcButton ({ title, id, link }) {
   let history = useHistory();
-
   function handleClick() {
-    history.push("ui-component");
-    console.log(link)
+    history.push(link);
   }
+  
   
   return (
     <button
