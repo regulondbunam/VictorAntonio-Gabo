@@ -1,5 +1,7 @@
 import React from 'react';
 import GsCcButtons from './components/gs_view_main/gs_cc_buttons';
+import GsccContent from './components/gs_view_main/gs_cc_content';
+
 
 import {Cover as GSccHead} from './ui-components/ui_components';
 
@@ -11,6 +13,8 @@ const DocUiCya = () => {
       </GSccHead>
       
       <GsCcButtons />
+
+      <GsccContent />
       
       
     </div>
