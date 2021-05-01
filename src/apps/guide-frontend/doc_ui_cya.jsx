@@ -1,22 +1,10 @@
 import React from 'react';
-import GsCcButtons from './components/gs_view_main/gs_cc_buttons';
-import GsccContent from './components/gs_view_main/gs_cc_content';
-
-
-import {Cover as GSccHead} from './ui-components/ui_components';
+import GsViewMain from './components/gs_view_main';
 
 const DocUiCya = () => {
   return (
     <div>
-      <GSccHead  >
-        <h1>Start Guide Front-End </h1>
-      </GSccHead>
-      
-      <GsCcButtons />
-
-      <GsccContent />
-      
-      
+      <GsViewMain/>
     </div>
   )
 }

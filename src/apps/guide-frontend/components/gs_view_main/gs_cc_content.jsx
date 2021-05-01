@@ -3,7 +3,7 @@ import conf from '../../conf/gs_view_main.conf.json'
 
 const description = conf.gs_cc_buttons.description;
 
-const GsccContent = () => {
+const GsCcContent = () => {
   return (
     <p dangerouslySetInnerHTML={
       {
@@ -15,4 +15,4 @@ const GsccContent = () => {
   )
 }
 
-export default GsccContent;
+export default GsCcContent;
