@@ -2,7 +2,8 @@ import React from 'react';
 import { Cover as GSccHead } from '../ui-components/ui_components';
 import GsCcContent from './gs_ui_component/gs_cc_content';
 
-export default function GsUiComponent() {
+export default function GsUiComponent({ prop }) {
+  console.log( prop );
   return (
     <>
       <GSccHead>

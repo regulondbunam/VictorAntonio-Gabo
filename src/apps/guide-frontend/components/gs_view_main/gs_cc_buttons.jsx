@@ -10,7 +10,7 @@ function GsCcButtons() {
     <div className={styles.container}>
       {
         buttons.map(button => (
-          <GsCcButton key={`button_main_${button.id}_${button.title}`} title={button.title} link={button.link} />
+          <GsCcButton key={`button_main_${button.id}_${button.title}`} title={button.title} link={button.link} props={button.props} />
         ))
       }
     </div>
