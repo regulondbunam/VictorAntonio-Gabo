@@ -20,7 +20,10 @@ export default function GsUiComponent() {
         
       </GSccHead>
 
-      <GsCcContent />
+      {
+        (id == 1)
+          && <GsCcContent />
+      }
       
     </>
   )
