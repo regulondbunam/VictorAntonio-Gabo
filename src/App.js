@@ -16,7 +16,7 @@ export default function App() {
         <Route path={"/tips"}>
           <Tips />
         </Route>
-        <Route exact path={"/ui-component"}>
+        <Route exact path={`/ui-component/:id`}>
           <GsUiComponent />
         </Route>
         <Route path="*">

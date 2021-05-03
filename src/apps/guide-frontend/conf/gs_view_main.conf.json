@@ -4,14 +4,16 @@
       {
         "id": 1,
         "title": "UI-component",
-        "link": "/ui-component?prop=ui-component",
+        "link": "/ui-component",
+        "content": "contenido1",
         "props": "ui-component",
         "anotherlink": "/ui-component"
       },
       {
         "id": 2,
         "title": "Create React Your App",
-        "link": "/ui-component?prop=create-app",
+        "link": "/ui-component",
+        "content": "contenido2",
         "props": "create-react-app",
         "anotherlink": "/create_your_app"
       }
