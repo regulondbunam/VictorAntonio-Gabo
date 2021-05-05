@@ -4,18 +4,12 @@
       {
         "id": 1,
         "title": "UI-component",
-        "link": "/ui-component",
-        "content": "contenido1",
-        "props": "ui-component",
-        "anotherlink": "/ui-component"
+        "link": "/ui-component"
       },
       {
         "id": 2,
         "title": "Create React Your App",
-        "link": "/ui-component",
-        "content": "contenido2",
-        "props": "create-react-app",
-        "anotherlink": "/create_your_app"
+        "link": "/ui-component"
       }
     ],
     "description": "<h1>Start</h1> dolor sit amet, consectetur adipiscing elit. Curabitur a vulputate lorem. Cras arcu diam, cursus dictum ligula et, pellentesque tristique lacus. Duis et ipsum non nisi pharetra dictum et ac libero. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas posuere et velit sit amet bibendum. Curabitur urna ante, mollis sed libero et, auctor rhoncus magna. Vivamus finibus mattis magna. Aliquam ac pharetra lacus. Fusce eu urna commodo, laoreet augue efficitur, congue tellus. Curabitur tincidunt nisl nec diam facilisis, in cursus libero feugiat. Morbi ac velit leo. Mauris laoreet tempor imperdiet. Cras mollis augue nulla, et mollis quam euismod ut. Integer cursus consectetur consequat. Vestibulum a imperdiet nunc."
