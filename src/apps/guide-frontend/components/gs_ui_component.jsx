@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router';
 import { Cover as GSccHead } from '../ui-components/ui_components';
 import GsCcContent from './gs_ui_component/gs_cc_content';
+import GSCcMenu from './gs_ui_component/gs_cc_menu';
 
 export default function GsUiComponent() {
 

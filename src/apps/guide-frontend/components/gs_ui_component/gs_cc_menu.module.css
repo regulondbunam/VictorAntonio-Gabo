@@ -1,0 +1,13 @@
+.sidebar {
+  display: inline-flex;
+  position: static;
+  width: 200px;
+  height: 100%;
+}
+
+.sidebar ul li {
+  color: blue;
+  text-align: left;
+  padding: 5px 5px;
+  border-bottom: 1px;
+}
