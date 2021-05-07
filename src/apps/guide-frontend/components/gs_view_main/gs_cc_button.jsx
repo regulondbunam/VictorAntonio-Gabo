@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import styles from './gs_cc_buttons.module.css';
 
-function GsCcButton ({ title, id, link }) {
+function GsCcButton ({ title, id, site }) {
   // Uso del hook useHistory para navegar a una ruta
   let history = useHistory();
   function handleClick() {
@@ -11,7 +11,7 @@ function GsCcButton ({ title, id, link }) {
       Las variables 'link' e 'id'  se reciben como PROPS de 'gs_cc_buttons.js' 
       y a us vez este los consulta del archivo JSON 'gs_cC_content'
     */
-    history.push(`${link}/${id}`);
+    history.push(`${site}`);
   }
   
   

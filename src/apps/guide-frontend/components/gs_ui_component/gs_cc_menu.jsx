@@ -1,19 +1,43 @@
 import React from 'react'
-import styles from './gs_cc_menu.module.css'
+import menu from '../../conf/gs_view_main.conf.json'
+
+const menuElements = menu.menuElements;
 
 const GSCcMenu = () => {
+  const handle = (value) => {
+    alert(value)
+  }
+
   return (
-    <div className={styles.sidebar}>
-      <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-        <li>Item 5</li>
-        <li>Item 6</li>
-      </ul>
+    <div>
+      {
+        menuElements.map((e)=> {
+          return MenuElement(e.id,e.title,e.value,e.sons,e.display,handle)
+        })
+      }
     </div>
   )
 }
 
+function MenuElement(id, title, value, sons, display=true, onClick){
+  
+  if(sons){
+    return(
+      <button key={id} onClick={()=>{onClick(value)}}>{title}
+        {
+          sons.map((e)=>{
+            return MenuElement(e.id,e.title,e.value,e.sons,onClick)
+          })
+        }
+      </button>
+    )
+  }
+  return(
+    <>
+      <button key={id} onClick={()=>{onClick(display)}}>{title}</button>
+    </>
+  );
+}
+
 export default GSCcMenu
+

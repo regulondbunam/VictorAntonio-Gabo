@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals"
 // librerias
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ApolloProvider } from "@apollo/react-hooks";
 import Client from "./conf/apollo/apollo_client";
@@ -17,9 +17,11 @@ ReactDOM[renderOrHydrate](
   <StrictMode>
     <BrowserRouter>
       <HelmetProvider>
+      
         <ApolloProvider client={Client}>
           <App />
         </ApolloProvider>
+
       </HelmetProvider>
     </BrowserRouter>
   </StrictMode>,
