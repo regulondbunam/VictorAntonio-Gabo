@@ -18,7 +18,7 @@ function GsCcButtons() {
             key={`button_main_${button.id}_${button.title}`} 
             title={button.title} 
             link={button.link}
-            id={button.site}
+            site={button.site}
             />
         ))
       
