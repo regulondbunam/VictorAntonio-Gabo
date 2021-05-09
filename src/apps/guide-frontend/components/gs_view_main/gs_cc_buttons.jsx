@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 // Importación del componente gs_cc_button
 import GsCcButton from './gs_cc_button';
 // Importación del archivo JSON que contiene la información de los botones

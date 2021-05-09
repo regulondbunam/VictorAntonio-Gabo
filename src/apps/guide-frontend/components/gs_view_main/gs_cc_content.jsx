@@ -1,6 +1,5 @@
 import React from 'react'
 import conf from '../../conf/gs_view_main.conf.json'
-import GSCcMenu from '../gs_ui_component/gs_cc_menu';
 
 import styles from './gs_cc_content.module.css';
 // Extraxión del contenido del archivo JSON en una variable
