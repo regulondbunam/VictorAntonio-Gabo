@@ -5,7 +5,6 @@ import GsUiComponent from './gs_ui_component';
 
 const GsCcBody = () => {  
   const {site} = useParams();
-  console.log(site);
   return (
     
     <>
