@@ -1,10 +1,9 @@
 import React from 'react';
 import GsViewMain from '../components/gs_view_main';
-import { useParams } from 'react-router';
 import GsUiComponent from './gs_ui_component';
 
-const GsCcBody = () => {  
-  const {site} = useParams();
+const GsCcBody = ({ site }) => {  
+  
   return (
     
     <>

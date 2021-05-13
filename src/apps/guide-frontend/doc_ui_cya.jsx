@@ -5,15 +5,12 @@ import GsCcBody from './components/gs_cc_body';
 import GsCcHead from './gs_cc_head';
 
 const DocUiCya = () => {
-  const {site} = useParams();
+  const { site } = useParams();
 
   return (
     <div>
-    <GsCcHead />
-      
-
-      <GsCcBody />
-       
+      <GsCcHead />
+      <GsCcBody site={site}/>
     </div>
   )
 }
