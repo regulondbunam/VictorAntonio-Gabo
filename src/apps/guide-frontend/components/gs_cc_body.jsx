@@ -3,7 +3,7 @@ import { Redirect } from 'react-router';
 import GsViewMain from '../components/gs_view_main';
 import GsUiComponent from './gs_ui_component';
 
-const GsCcBody = ({ site, authorized }) => {  
+const GsCcBody = ({ site }) => {  
 
   if (site != "create-app" && site != "ui-components" && site != undefined){
     return <Redirect to="/"/>
