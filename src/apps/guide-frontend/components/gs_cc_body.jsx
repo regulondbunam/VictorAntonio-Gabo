@@ -1,12 +1,18 @@
 import React from 'react';
+import { Redirect } from 'react-router';
 import GsViewMain from '../components/gs_view_main';
 import GsUiComponent from './gs_ui_component';
 
-const GsCcBody = ({ site }) => {  
+const GsCcBody = ({ site, authorized }) => {  
+
+  if (site != "create-app" && site != "ui-components" && site != undefined){
+    return <Redirect to="/"/>
+  }
   
   return (
     
     <>
+
     {
       ( site == undefined )
         && <GsViewMain/>      

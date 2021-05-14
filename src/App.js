@@ -12,7 +12,7 @@ export default function App() {
         <Route exact path={"/"}>
           <Doc />
         </Route>
-        <Route path={"/:site"}>
+        <Route exact path={"/:site"}>
           <Doc />
         </Route>
         <Route path="*">
