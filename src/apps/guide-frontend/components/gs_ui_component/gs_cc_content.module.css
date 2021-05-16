@@ -3,3 +3,6 @@
   height: auto;
   margin: 2vh auto;
 }
+.container{
+  display: flex;
+}
