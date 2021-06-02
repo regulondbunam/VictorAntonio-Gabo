@@ -3,7 +3,7 @@ import { Redirect } from 'react-router';
 import GsViewMain from '../components/gs_view_main';
 import GsUiComponent from './gs_ui_component';
 
-const GsCcBody = ({ site }) => {  
+const GsCcBody = ({ site, setState }) => {  
 
   if (site != "create-app" && site != "ui-components" && site != undefined){
     return <Redirect to="/"/>
@@ -20,7 +20,7 @@ const GsCcBody = ({ site }) => {
 
     {
       ( site == "ui-components")
-        && <GsUiComponent />
+        && <GsUiComponent setState={(state)=>{setState(state)}}/>
     }
     
     {

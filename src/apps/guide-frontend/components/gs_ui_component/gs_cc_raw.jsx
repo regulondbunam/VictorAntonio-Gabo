@@ -2,14 +2,24 @@ import React, {useState, useEffect} from 'react'
 import GsCcMarkdown from './gs_cc_markdown';
 import { Modal } from '../../ui-components/ui_components';
 
-const GSCcRaw = () => {
+const GSCcRaw = ({setState}) => {
 
   const [ data, setData ] = useState("");
 
   useEffect(()=>{
-    fetch('https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/ui-components/input/buttons/button.jsx')
+    if(data===""){
+      setState("loading")
+      try{
+        fetch('https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/ui-components/input/buttons/button.jsx')
       .then(response => response.text())
       .then(text => setData(text))
+      }catch(e){
+        console.error(e)
+        setState("error")
+      }
+    }else{
+      setState("done")
+    }
   }, [data])
 
   const inicio = `/**`;
