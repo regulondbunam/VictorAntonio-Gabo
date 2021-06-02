@@ -2,6 +2,7 @@
   width: 80%;
   height: auto;
   margin: 2vh auto;
+  font-size: 1em;
 }
 .container{
   display: flex;

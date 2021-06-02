@@ -1,6 +1,8 @@
 import React from 'react'
 import { Remarkable } from 'remarkable';
 
+import styles from './gs_cc_markdown.module.css'
+
 export default function GsCcMarkdown({txt}) {
   return (
     <div>
@@ -23,8 +25,8 @@ class MarkdownEditor extends React.Component {
 
   render() {
     return (
-      <div>
-        <div
+      <div  className={styles.container}>
+        <div className={styles.parrafos}
           dangerouslySetInnerHTML={this.getRawMarkup()}
         />
       </div>
