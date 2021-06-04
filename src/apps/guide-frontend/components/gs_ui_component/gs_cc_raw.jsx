@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import GsCcMarkdown from './gs_cc_markdown';
-import { Modal } from '../../ui-components/ui_components';
 
 const GSCcRaw = ({setState}) => {
 
@@ -26,6 +25,9 @@ const GSCcRaw = ({setState}) => {
   const final = `**/`;
 
   let cleanData = data.substring(data.indexOf(inicio)+3, data.indexOf(final));
+  
+  // Segundo MarkDown
+  console.log(data.substring(data.indexOf(inicio,data.indexOf(inicio)+3), data.indexOf(final,data.indexOf(final)+3) ))
 
 
   return (
