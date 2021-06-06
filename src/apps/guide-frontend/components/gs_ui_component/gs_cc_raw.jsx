@@ -27,7 +27,7 @@ const GSCcRaw = ({setState}) => {
   let cleanData = data.substring(data.indexOf(inicio)+3, data.indexOf(final));
   
   // Segundo MarkDown
-  console.log(data.substring(data.indexOf(inicio,data.indexOf(inicio)+3), data.indexOf(final,data.indexOf(final)+3) ))
+  console.log(data.substring(data.indexOf(inicio,data.indexOf(inicio)+3)+3, data.indexOf(final,data.indexOf(final)+3) ))
 
 
   return (
@@ -36,7 +36,7 @@ const GSCcRaw = ({setState}) => {
       {
         data==="" ? 'Cargando...' :
           <GsCcMarkdown txt={cleanData}/>
-
+          // Segundo MarkDown
       }
     </div>
   )
