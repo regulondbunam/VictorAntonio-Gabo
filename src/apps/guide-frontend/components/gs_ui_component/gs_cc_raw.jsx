@@ -27,14 +27,10 @@ const GSCcRaw = ({setState}) => {
   const final = `**/`;
 
   let cleanData = data.substring(data.indexOf(inicio)+3, data.indexOf(final));
-  
-  // Segundo MarkDown
-  console.log(data.substring(data.indexOf(inicio,data.indexOf(inicio)+3)+3, data.indexOf(final,data.indexOf(final)+3) ))
 
   const segundoMD = data.substring(data.indexOf(inicio,data.indexOf(inicio)+3)+3, data.indexOf(final,data.indexOf(final)+3) );
 
   const mostrarMarkdown = () => {
-    console.log('funciona')
     document.querySelector('#premio').style.display = 'block';
     document.querySelector('#button').style.display = 'none';
   }
@@ -43,7 +39,7 @@ const GSCcRaw = ({setState}) => {
   return (
     <div className={styles.container}>
       {
-        data==="" ? 'Cargando...' :
+        data==="" ? '' :
           <GsCcMarkdown txt={cleanData}/>
           // Segundo MarkDown
       }
@@ -55,8 +51,10 @@ const GSCcRaw = ({setState}) => {
       </button>
       <div id="premio" style={{display:'none'}}>
 
+      <hr style={{height:'2px',border:'none', backgroundColor:'#3d779b', borderRadius:'10px'}}/>
+
       {
-        data==="" ? 'Cargando...' :
+        data==="" ? '' :
         <GsCcMarkdown txt={segundoMD}/>
       }
       </div>
