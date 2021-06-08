@@ -8,7 +8,6 @@ import styles from './gs_cc_content.module.css'
 
 //const menuElements = conf.menuElements;
 
-// Extraxión del contenido del JSON en una variable
 const description = conf.gs_cc_buttons.description;
 
 const GsCcContent = () => {
