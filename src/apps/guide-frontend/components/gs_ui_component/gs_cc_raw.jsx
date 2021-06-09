@@ -32,7 +32,14 @@ const GSCcRaw = ({setState}) => {
 
   const mostrarMarkdown = () => {
     document.querySelector('#premio').style.display = 'block';
-    document.querySelector('#button').style.display = 'none';
+    document.querySelector('#buttonMostrar').style.display = 'none';
+    document.querySelector('#buttonOcultar').style.display = 'block';
+  }
+
+  const ocultarMarkdown = () => {
+    document.querySelector('#premio').style.display = 'none';
+    document.querySelector('#buttonMostrar').style.display = 'block';
+    document.querySelector('#buttonOcultar').style.display = 'none';
   }
 
 
@@ -43,12 +50,7 @@ const GSCcRaw = ({setState}) => {
           <GsCcMarkdown txt={cleanData}/>
           // Segundo MarkDown
       }
-      <button
-        id="button"
-        onClick={ mostrarMarkdown } 
-        className={styles.button}>
-        See more
-      </button>
+      
       <div id="premio" style={{display:'none'}}>
 
       <hr style={{height:'2px',border:'none', backgroundColor:'#3d779b', borderRadius:'10px'}}/>
@@ -58,6 +60,20 @@ const GSCcRaw = ({setState}) => {
         <GsCcMarkdown txt={segundoMD}/>
       }
       </div>
+
+      <button
+        id="buttonMostrar"
+        onClick={ mostrarMarkdown } 
+        className={styles.buttonMostrar}>
+        See more
+      </button>
+
+      <button
+        id="buttonOcultar"
+        onClick={ ocultarMarkdown } 
+        className={styles.buttonOcultar}>
+        See less
+      </button>
     </div>
   )
 }
