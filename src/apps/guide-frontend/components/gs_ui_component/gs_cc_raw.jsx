@@ -11,7 +11,7 @@ const GSCcRaw = ({setState}) => {
     if(data===""){
       setState("loading")
       try{
-        fetch('https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/ui-components/input/buttons/button.jsx')
+        fetch('https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/README.md')
       .then(response => response.text())
       .then(text => setData(text))
       }catch(e){
@@ -48,7 +48,8 @@ const GSCcRaw = ({setState}) => {
       {
         data === "" ? '' : 
         
-        data.includes('/**') ? <GsCcMarkdown txt={cleanData} />
+        data.includes('/**') 
+        ? <GsCcMarkdown txt={cleanData} />
         : <GsCcMarkdown txt={data} />
         
       }

@@ -18,24 +18,27 @@ const GsCcBody = ({ site, setState }) => {
       ( site == undefined )
         && <GsViewMain/>      
     }
+
     <div style={{display:'flex',width:'100%'}}>
+
       <div style={{width:'20%'}}>
         {
           ( site == "ui-components")
             && <GsCcRawME />
         }
       </div>
+
       <div style={{width:'80%'}}>
         {
           ( site == "ui-components")
             && <GsUiComponent setState={(state)=>{setState(state)}}/>
         }
-    
         {
           (site == "create-app")
           && <GsUiComponent />
         }
       </div>
+
     </div>
   </>
     
