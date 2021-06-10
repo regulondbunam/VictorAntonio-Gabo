@@ -23,57 +23,67 @@ const GSCcRaw = ({setState}) => {
     }
   }, [data])
 
-  const inicio = `/**`;
-  const final = `**/`;
-
-  let cleanData = data.substring(data.indexOf(inicio)+3, data.indexOf(final));
-
-  const segundoMD = data.substring(data.indexOf(inicio,data.indexOf(inicio)+3)+3, data.indexOf(final,data.indexOf(final)+3) );
-
   const mostrarMarkdown = () => {
-    document.querySelector('#premio').style.display = 'block';
+    document.querySelector('#MostrarMD').style.display = 'block';
     document.querySelector('#buttonMostrar').style.display = 'none';
     document.querySelector('#buttonOcultar').style.display = 'block';
   }
 
   const ocultarMarkdown = () => {
-    document.querySelector('#premio').style.display = 'none';
+    document.querySelector('#MostrarMD').style.display = 'none';
     document.querySelector('#buttonMostrar').style.display = 'block';
     document.querySelector('#buttonOcultar').style.display = 'none';
   }
+
+  const inicio = `/**`;
+  const final = `**/`;
+
+  let cleanData = data.substring(data.indexOf(inicio)+3, data.indexOf(final));
+  
+  let segundoMD = data.substring(data.indexOf(inicio,data.indexOf(inicio)+3)+3, data.indexOf(final,data.indexOf(final)+3) );
 
 
   return (
     <div className={styles.container}>
       {
-        data==="" ? '' :
-          <GsCcMarkdown txt={cleanData}/>
-          // Segundo MarkDown
+        data === "" ? '' : 
+        
+        data.includes('/**') ? <GsCcMarkdown txt={cleanData} />
+        : <GsCcMarkdown txt={data} />
+        
+      }
+
+      <div id="MostrarMD" style={{display:'none'}}>
+        <hr style={{height:'2px',border:'none', backgroundColor:'#3d779b', borderRadius:'10px'}}/>
+
+        {
+          data === "" ? '' : 
+        
+            data.includes('/**') ? <GsCcMarkdown txt={segundoMD} />
+            : '' 
+        }
+
+        
+      </div>
+      {
+        data === "" ? '' :
+        data.includes('/**') ?
+        <button
+          id="buttonMostrar"
+          onClick={ mostrarMarkdown } 
+          className={styles.buttonMostrar}>
+          See more
+        </button>
+        : ''
       }
       
-      <div id="premio" style={{display:'none'}}>
 
-      <hr style={{height:'2px',border:'none', backgroundColor:'#3d779b', borderRadius:'10px'}}/>
-
-      {
-        data==="" ? '' :
-        <GsCcMarkdown txt={segundoMD}/>
-      }
-      </div>
-
-      <button
-        id="buttonMostrar"
-        onClick={ mostrarMarkdown } 
-        className={styles.buttonMostrar}>
-        See more
-      </button>
-
-      <button
-        id="buttonOcultar"
-        onClick={ ocultarMarkdown } 
-        className={styles.buttonOcultar}>
-        See less
-      </button>
+        <button
+          id="buttonOcultar"
+          onClick={ ocultarMarkdown } 
+          className={styles.buttonOcultar}>
+          See less
+        </button>
     </div>
   )
 }
