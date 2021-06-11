@@ -20,8 +20,15 @@ const GsCcRawME = () => {
     }
   }, [data]);
 
-  function hola(value) {
-    alert(value);
+  function getEnlace(value) {
+    const body = document.getElementById("gs_cc_raw_012")
+    if(body){
+      const event = new CustomEvent('updateBody', { detail: {url: value} });
+      body.dispatchEvent(event);
+    }
+    
+
+    //alert(value)
   }
 
   return (
@@ -32,7 +39,7 @@ const GsCcRawME = () => {
           <GsCcTreeMenu 
             dataMenu={data}
             onSelect={(value) => {
-              hola(value);
+              getEnlace(value);
             }}
           />
       }

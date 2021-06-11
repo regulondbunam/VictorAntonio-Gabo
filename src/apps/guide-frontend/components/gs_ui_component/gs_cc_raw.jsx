@@ -6,12 +6,21 @@ import styles from './gs_cc_raw.module.css';
 const GSCcRaw = ({setState}) => {
 
   const [ data, setData ] = useState("");
+  const [ _url, set_url ] = useState("https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/README.md");
 
   useEffect(()=>{
+    const body = document.getElementById("gs_cc_raw_012")
+    if(body){
+      body.addEventListener('updateBody', e => {
+        console.log(e)
+        set_url(e.detail?.url)
+        setData("")
+      });
+    }
     if(data===""){
       setState("loading")
       try{
-        fetch('https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/README.md')
+        fetch(_url)
       .then(response => response.text())
       .then(text => setData(text))
       }catch(e){
@@ -21,7 +30,7 @@ const GSCcRaw = ({setState}) => {
     }else{
       setState("done")
     }
-  }, [data])
+  }, [data,_url,set_url])
 
   const mostrarMarkdown = () => {
     document.querySelector('#MostrarMD').style.display = 'block';
@@ -44,7 +53,7 @@ const GSCcRaw = ({setState}) => {
 
 
   return (
-    <div className={styles.container}>
+    <div id="gs_cc_raw_012" className={styles.container}>
       {
         data === "" ? '' : 
         
