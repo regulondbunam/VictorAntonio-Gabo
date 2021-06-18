@@ -12,7 +12,6 @@ const GSCcRaw = ({setState}) => {
     const body = document.getElementById("gs_cc_raw_012")
     if(body){
       body.addEventListener('updateBody', e => {
-        console.log(e)
         set_url(e.detail?.url)
         setData("")
       });

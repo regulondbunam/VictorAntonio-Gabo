@@ -15,7 +15,7 @@ export default function GsCcMarkdown({txt}) {
 class MarkdownEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.md = new Remarkable();
+    this.md = new Remarkable({html:true});
     this.state = { value: this.props.text };
   }
 
