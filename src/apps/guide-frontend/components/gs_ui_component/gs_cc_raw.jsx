@@ -8,6 +8,14 @@ const GSCcRaw = ({setState}) => {
   const [ data, setData ] = useState("");
   const [ _url, set_url ] = useState("https://raw.githubusercontent.com/regulondbunam/Component-Repository/ui-components/README.md");
 
+  let button_less = document.querySelector('#buttonOcultar');
+  let mD = document.querySelector('#MostrarMD');
+
+  if(button_less || mD){
+    button_less.style.display="none"
+    mD.style.display="none"
+  }
+
   useEffect(()=>{
     const body = document.getElementById("gs_cc_raw_012")
     if(body){
