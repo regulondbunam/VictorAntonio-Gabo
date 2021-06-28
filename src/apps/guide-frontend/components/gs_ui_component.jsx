@@ -9,10 +9,6 @@ const GsUiComponent = ({setState}) => {
 
   return (
     <div>
-   
-      {
-        // Antes aquí estaba <Content /> 
-      }
       
       {
         (site == "ui-components")

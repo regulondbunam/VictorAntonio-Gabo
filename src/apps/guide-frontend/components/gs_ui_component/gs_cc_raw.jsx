@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import GsCcMarkdown from './gs_cc_markdown';
-
 import styles from './gs_cc_raw.module.css';
 
 const GSCcRaw = ({setState}) => {
@@ -55,7 +54,6 @@ const GSCcRaw = ({setState}) => {
   const final = `**/`;
 
   let cleanData = data.substring(data.indexOf(inicio)+3, data.indexOf(final));
-  
   let segundoMD = data.substring(data.indexOf(inicio,data.indexOf(inicio)+3)+3, data.indexOf(final,data.indexOf(final)+3) );
 
 
@@ -80,7 +78,6 @@ const GSCcRaw = ({setState}) => {
             : '' 
         }
 
-        
       </div>
       {
         data === "" ? '' :
@@ -94,7 +91,6 @@ const GSCcRaw = ({setState}) => {
         : ''
       }
       
-
         <button
           id="buttonOcultar"
           onClick={ ocultarMarkdown } 

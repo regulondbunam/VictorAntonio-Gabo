@@ -9,9 +9,6 @@ const GsViewMain = () => {
 
   return (
     <>
-      {
-        // Antes aquí estaba <Content /> 
-      }
       <div>
       <p
         style={{width:"80%", height:"auto",margin:"2vh auto", fontSize:"1em"}}
@@ -22,7 +19,6 @@ const GsViewMain = () => {
       }>        
       </p>
     </div>
-
 
       <GsCcButtons />
     </>
