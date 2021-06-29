@@ -86,7 +86,7 @@ const GSCcRaw = ({setState}) => {
           id="buttonMostrar"
           onClick={ mostrarMarkdown } 
           className={styles.buttonMostrar}>
-          See more
+          Technical guide
         </button>
         : ''
       }
